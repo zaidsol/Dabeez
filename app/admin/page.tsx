@@ -20,7 +20,7 @@ export default function AdminLogin() {
     }
 
     try {
-      const res = await fetch('http://localhost:3001/auth/login', { // Changed endpoint
+      const res = await fetch('https://dabeez-backend.fly.dev/auth/login', { // ✅ API replaced
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),

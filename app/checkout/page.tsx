@@ -55,7 +55,7 @@ const CheckoutPage: React.FC = () => {
 
       console.log("📦 Sending order to API:", orderData);
 
-      const response = await fetch('http://localhost:3001/api/orders', {
+      const response = await fetch('https://dabeez-backend.fly.dev/api/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

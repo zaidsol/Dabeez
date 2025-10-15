@@ -40,7 +40,7 @@ export default function AddProductModal({ onClose, onAdded }: AddProductModalPro
     try {
       console.log("🔄 Adding new product...");
       
-      const res = await fetch("http://localhost:3001/products", {
+      const res = await fetch("https://dabeez-backend.fly.dev/products", {
         method: "POST",
         headers: {
           'Authorization': `Bearer ${token}`

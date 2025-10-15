@@ -48,11 +48,10 @@ export default function AdminDashboard() {
   const [newOrderNotification, setNewOrderNotification] = useState<Order | null>(null);
   const [loadingOrders, setLoadingOrders] = useState(true);
 
- 
   const fetchOrders = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch('http://localhost:3001/api/orders', {
+      const response = await fetch('https://dabeez-backend.fly.dev/api/orders', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -70,11 +69,10 @@ export default function AdminDashboard() {
     }
   };
 
- 
   const fetchStats = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch('http://localhost:3001/api/orders/stats', {
+      const response = await fetch('https://dabeez-backend.fly.dev/api/orders/stats', {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -90,11 +88,10 @@ export default function AdminDashboard() {
     }
   };
 
-
   const updateOrderStatus = async (orderId: string, newStatus: 'pending' | 'completed') => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch(`http://localhost:3001/api/orders/${orderId}/status`, {
+      const response = await fetch(`https://dabeez-backend.fly.dev/api/orders/${orderId}/status`, {
         method: 'PATCH',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -105,7 +102,6 @@ export default function AdminDashboard() {
       
       if (!response.ok) throw new Error('Failed to update order');
       
-    
       setOrders(prev => 
         prev.map(order => 
           order._id === orderId 
@@ -114,7 +110,6 @@ export default function AdminDashboard() {
         )
       );
       
-     
       fetchStats();
       
     } catch (error) {
@@ -123,13 +118,11 @@ export default function AdminDashboard() {
     }
   };
 
-
   useEffect(() => {
     if (!isAdmin) return;
 
     fetchOrders();
     fetchStats();
-
 
     const interval = setInterval(() => {
       fetchOrders();
@@ -139,7 +132,6 @@ export default function AdminDashboard() {
     return () => clearInterval(interval);
   }, [isAdmin]);
 
- 
   useEffect(() => {
     if (orders.length > 0) {
       const latestOrder = orders[0]; // Assuming sorted by newest first
@@ -181,7 +173,6 @@ export default function AdminDashboard() {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       
-     
       {newOrderNotification && (
         <div className="fixed top-4 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg animate-slide-in z-50">
           <div className="flex items-center space-x-3">

@@ -45,7 +45,7 @@ const ProductCard: React.FC<Props> = ({ product, isAdmin, onUpload, onClick, onT
 
       console.log("🔄 Attempting to delete product:", product._id);
       
-      const res = await fetch(`http://localhost:3001/products/${product._id}`, {
+      const res = await fetch(`https://dabeez-backend.fly.dev/products/${product._id}`, {
         method: "DELETE",
         headers: {
           'Authorization': `Bearer ${token}`
@@ -83,7 +83,7 @@ const ProductCard: React.FC<Props> = ({ product, isAdmin, onUpload, onClick, onT
 
       console.log("🔄 Toggling sold out status:", product._id, newSoldOutStatus);
       
-      const res = await fetch(`http://localhost:3001/products/${product._id}`, {
+      const res = await fetch(`https://dabeez-backend.fly.dev/products/${product._id}`, {
         method: "PUT",
         headers: { 
           'Content-Type': 'application/json',
