@@ -4,7 +4,7 @@ import ProductCard from "../components/ProductCard";
 import ProductModal from "../components/ProductModal";
 import AddProductModal from "../components/AddProductModal";
 import Navbar from "../components/Navbar";
-import { useAuth } from "../hooks/useauth";
+import { useAuth } from "../hooks/useAuth";
 import { getToken } from "../lib/auth";
 
 
