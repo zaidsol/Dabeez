@@ -1,7 +1,7 @@
 // app/admin/dashboard/page.tsx
 'use client';
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '../hooks/useath';
 import Navbar from '../components/Navbar';
 
 interface Order {

@@ -4,14 +4,14 @@ import ProductCard from "../components/ProductCard";
 import ProductModal from "../components/ProductModal";
 import AddProductModal from "../components/AddProductModal";
 import Navbar from "../components/Navbar";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "../hooks/useath";
 import { getToken } from "../lib/auth";
 
 
 interface Product {
   _id: string;
   name: string;
-  price: number;
+  price: number; //t
   category?: string;
   description?: string;
   color?: string;

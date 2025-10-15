@@ -1,7 +1,7 @@
 'use client';
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "../hooks/useath";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
