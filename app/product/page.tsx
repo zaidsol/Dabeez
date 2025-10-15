@@ -4,8 +4,9 @@ import ProductCard from "../components/ProductCard";
 import ProductModal from "../components/ProductModal";
 import AddProductModal from "../components/AddProductModal";
 import Navbar from "../components/Navbar";
-import { useAuth } from "../hooks/useAuth";
+import { useAuth } from "../hooks/useauth";
 import { getToken } from "../lib/auth";
+
 
 interface Product {
   _id: string;
