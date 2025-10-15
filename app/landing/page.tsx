@@ -17,7 +17,7 @@ const LandingPage: React.FC = () => {
     <div className="bg-gray-100">
       <Navbar />
       <Hero />
-    <ProductsPage showNavbar={false} />  {/* Navbar skipped here */}
+    <ProductsPage />  {/* Navbar skipped here */}
 
       <Footer />
     </div>
