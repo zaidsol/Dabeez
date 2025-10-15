@@ -38,7 +38,8 @@ export default function ProductsPage() {
         setFetchError("");
         console.log("🔄 Fetching products for PUBLIC view...");
 
-        const res = await fetch("http://localhost:3001/products", {
+        // 🔹 CHANGED: Replaced localhost with deployed Fly.io backend URL
+        const res = await fetch("https://dabeez-backend.fly.dev/products", {
           headers: { "Content-Type": "application/json" },
         });
 
@@ -104,8 +105,9 @@ export default function ProductsPage() {
 
     try {
       alert("🔄 Uploading images...");
+      // 🔹 CHANGED: Replaced localhost with deployed Fly.io backend URL
       const res = await fetch(
-        `http://localhost:3001/products/${productId}/upload-images`,
+        `https://dabeez-backend.fly.dev/products/${productId}/upload-images`,
         {
           method: "PUT",
           headers: { Authorization: `Bearer ${token}` },
@@ -272,6 +274,6 @@ export default function ProductsPage() {
           onClose={() => setSelectedProduct(null)}
         />
       )}
-    </div>
+    </div>//
   );
 }
