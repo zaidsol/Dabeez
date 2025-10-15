@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Stylish Jacket",
+    "price": 59.99,
+    "image": "/assets/c1.webp"
+  },
+  {
+    "id": 2,
+    "name": "Casual Sneakers",
+    "price": 79.99,
+    "image": "/assets/c2.webp"
+  },
+  {
+    "id": 3,
+    "name": "Modern Backpack",
+    "price": 45.0,
+    "image": "/assets/c3.webp"
+  },
+  {
+    "id": 4,
+    "name": "Classic Watch",
+    "price": 120.0,
+    "image": "/assets/c4.webp"
+  },
+  {
+    "id": 5,
+    "name": "Sunglasses",
+    "price": 29.99,
+    "image": "/assets/c5.webp"
+  },
+  {
+    "id": 6,
+    "name": "Running Shoes",
+    "price": 89.99,
+    "image": "/assets/c6.webp"
+  }
+]
