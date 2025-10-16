@@ -8,10 +8,10 @@ const securityHeaders = [
       script-src 'self' 'unsafe-eval' 'unsafe-inline' https:;
       style-src 'self' 'unsafe-inline' https:;
       img-src 'self' data: https:;
-      connect-src 'self' https://dabeez-backend.fly.dev https://api.vercel.com;
+      connect-src 'self' https://dabeez-backend.fly.dev https://api.vercel.com https://*.firebaseio.com https://*.googleapis.com https://*.firestore.googleapis.com;
       font-src 'self' https:;
       frame-src 'self';
-    `.replace(/\s{2,}/g, " "),
+    `.replace(/\s{2,}/g, " ").trim(),
   },
 ];
 
