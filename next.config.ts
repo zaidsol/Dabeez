@@ -15,7 +15,7 @@ const securityHeaders = [
   },
 ];
 
-const nextConfig: NextConfig = {
+const nextConfig: NextConfig = { //
   async headers() {
     return [
       {
